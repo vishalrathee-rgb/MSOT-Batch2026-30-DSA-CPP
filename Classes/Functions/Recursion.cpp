@@ -11,7 +11,35 @@ using namespace std;
     2. Recursive Case: This is where the function calls itself with a modified argument,
     gradually approaching the base case.
 */
+/*
+    <------- How to write a recursive function? ------>
+    1. Identify the base case: Determine the simplest instance of the problem that can be solved directly without further recursion.
+    2. Define the recursive case: Break down the problem into smaller subproblems and
+    call the function recursively with modified arguments that bring it closer to the base case.
+    3. Combine the results: If necessary, combine the results of the recursive calls to
+    obtain the final solution for the original problem.
+*/
 
+/*
+    <------- Example of Recursion ------>
+    1. Factorial Calculation: The factorial of a non-negative integer n (denoted as n!) is the product of all positive integers less than or equal to n. It can be defined recursively as:
+        - Base Case: fact(0) = 1
+        - Recursive Case: fact(n) = n * fact(n - 1) for n > 0
+
+    2. Fibonacci Sequence: The Fibonacci sequence is a series of numbers where each number is the sum of the two preceding ones. It can be defined recursively as:
+        - Base Cases: fib(0) = 0, fib(1) = 1
+        - Recursive Case: fib(n) = fib(n - 1) + fib(n - 2) for n > 1
+
+    3. Tower of Hanoi: The Tower of Hanoi is a classic problem that involves moving a stack of disks from one peg to another, following specific rules. The recursive solution involves moving smaller stacks of disks between pegs until the entire stack is transferred.
+
+    4. Binary Search: Binary search is an efficient algorithm for finding a target value in a sorted array. It can be implemented recursively by dividing the search space in half at each step until the target is found or the search space is empty.
+*/
+
+/*
+    <-------How does Recursion work? ------>
+    Recursion works by maintaining a call stack, which keeps track of the function calls and their
+    local variables. When a recursive function is called, a new frame is added to the call stack, and the function's execution continues until it reaches the base case. Once the base case is reached, the function starts returning values back through the call stack, unwinding the recursion and combining results as needed.
+*/
 // Recursion to print numbers from n to 1
 
 void printN(int n)
