@@ -42,6 +42,32 @@ using namespace std;
 */
 // Recursion to print numbers from n to 1
 
+
+// Printing a right angled triangle of stars using recursion
+
+void printStars(int n)
+{
+    if (n <= 0)
+        return;
+
+    printStars(n - 1);
+    for (int i = 0; i < n; i++)
+        cout << "* ";
+    cout << endl;
+}
+
+
+// print of inverted right angled triangle of stars using recursion
+void printInvertedTriangle(int n)
+{
+    if (n <= 0)
+        return;
+
+    for (int i = 0; i < n; i++)
+        cout << "* ";
+    cout << endl;
+    printInvertedTriangle(n - 1);
+}
 void printN(int n)
 {
     if (n <= 0)
@@ -67,4 +93,8 @@ int main()
     cout << endl;
     cin >> a >> b;
     printAB(a , b);
+    cout << endl;
+    printStars(n);
+    cout << endl;
+    printInvertedTriangle(n);
 }
