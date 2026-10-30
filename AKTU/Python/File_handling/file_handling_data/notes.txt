@@ -1,0 +1,4 @@
+File handling notes
+Files preserve data after a program ends.
+UTF-8 supports text such as café and नमस्ते.
+This line was appended.
